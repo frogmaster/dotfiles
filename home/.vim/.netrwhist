@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/home/master/elion/dumbsjs/test/models'
+let g:netrw_dirhist_2='/home/master/Hackerank/app/collections'
+let g:netrw_dirhist_3='/home/master/elion/dumbsjs/app/views/templates'
+let g:netrw_dirhist_4='/home/master/elion/kmdb/KMDB/lib/KMDB/Device'
+let g:netrw_dirhist_5='/home/master/elion/dumbsjs/app/views/templates'
