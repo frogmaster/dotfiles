@@ -1,6 +1,10 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.homesick/repos/oh-my-zsh
-prompt off
+
+#for some reason newer zsh has prompt command and on my machine it doesn't play well with themes
+if (( $+commands[prompt] )) ; then 
+    prompt off
+fi
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
