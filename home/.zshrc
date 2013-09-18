@@ -1,12 +1,12 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/.homesick/repos/oh-my-zsh
 prompt off
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="agnoster"
-#ZSH_THEME="blinks"
+#SH_THEME="blinks"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -40,7 +40,7 @@ ZSH_THEME="agnoster"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git archlinux coffee colored-man colorize command-not-found ssh-agent tmux)
+plugins=(git archlinux coffee colored-man colorize command-not-found ssh-agent tmux systemd)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -48,5 +48,23 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl:/usr/bin/site_perl:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/usr/bin/vendor_perl
 
 alias ys='ssh -t -t ybershell'
-
 alias homeshick="$HOME/.homesick/repos/homeshick/home/.homeshick"
+alias ta='tmux attach'
+
+fixssh() {
+    for key in SSH_AUTH_SOCK SSH_CONNECTION SSH_CLIENT; do
+        if (tmux show-environment | grep "^${key}" > /dev/null); then
+            value=`tmux show-environment | grep "^${key}" | sed -e "s/^[A-Z_]*=//"`
+            export ${key}="${value}"
+        fi
+    done
+}
+
+if test $TMUX
+then
+    fixssh
+fi
+
+if [ -f "$HOME/.dircolors" ] ; then
+    eval $(dircolors -b $HOME/.dircolors)
+fi
