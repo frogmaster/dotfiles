@@ -31,4 +31,5 @@ function! RunShebang()
     endif
 endfunction
 map <F5> :call RunShebang()<CR>
+map <F1> :NERDTreeToggle<CR>
 let g:airline_powerline_fonts = 1
