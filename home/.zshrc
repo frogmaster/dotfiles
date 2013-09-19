@@ -3,7 +3,7 @@ ZSH=$HOME/.homesick/repos/oh-my-zsh
 
 #for some reason newer zsh has prompt command and on my machine it doesn't play well with themes
 #if (( $+commands[prompt] )) ; then 
-eval 'prompt off'
+prompt off 2&>1 >/dev/null
 #fi
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
