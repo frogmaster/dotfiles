@@ -1,6 +1,8 @@
 au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=handlebars
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 
+set softtabstop=4 shiftwidth=4 tabstop=4 expandtab
+
 execute pathogen#infect()
 if ! has('gui_running')
     set ttimeoutlen=10
