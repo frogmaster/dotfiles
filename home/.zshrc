@@ -47,12 +47,12 @@ DISABLE_CORRECTION="true"
 plugins=(git archlinux coffee colored-man colorize command-not-found ssh-agent tmux systemd extract)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.homesick/repos/homeshick/homeshick.sh
 
 # Customize to your needs...
 export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl:/usr/bin/site_perl:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/usr/bin/vendor_perl
 
 alias ys='ssh -t -t ybershell'
-alias homeshick="$HOME/.homesick/repos/homeshick/home/.homeshick"
 alias ta='tmux attach'
 
 fixssh() {
