@@ -28,3 +28,6 @@
 [submodule "home/.vim/bundle/python-mode"]
 	path = home/.vim/bundle/python-mode
 	url = http://github.com/klen/python-mode.git
+[submodule "home/.vim/bundle/vim-json"]
+	path = home/.vim/bundle/vim-json
+	url = https://github.com/elzr/vim-json.git
