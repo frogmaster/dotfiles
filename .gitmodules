@@ -31,3 +31,6 @@
 [submodule "home/.vim/bundle/vim-json"]
 	path = home/.vim/bundle/vim-json
 	url = https://github.com/elzr/vim-json.git
+[submodule "home/.vim/bundle/vim-jade"]
+	path = home/.vim/bundle/vim-jade
+	url = git://github.com/digitaltoad/vim-jade.git
