@@ -46,15 +46,20 @@ DISABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git archlinux coffee colored-man colorize command-not-found ssh-agent tmux systemd extract)
 
+setopt no_auto_remove_slash
 source $ZSH/oh-my-zsh.sh
 source $HOME/.homesick/repos/homeshick/homeshick.sh
+#disable the fcking bugger cding me into /usr/src
+unsetopt cdablevars
 
 # Customize to your needs...
 export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl:/usr/bin/site_perl:/opt/android-sdk/platform-tools:/opt/android-sdk/tools:/usr/bin/vendor_perl
-
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel'
+export JAVA_FONTS=/usr/share/fonts/TTF
 alias ys='ssh -t -t ybershell'
 alias ta='tmux attach'
-
+alias nmup='nmcli con up id'
+alias nmdown='nmcli con down id'
 fixssh() {
     for key in SSH_AUTH_SOCK SSH_CONNECTION SSH_CLIENT; do
         if (tmux show-environment | grep "^${key}" > /dev/null); then
@@ -72,3 +77,4 @@ fi
 if [ -f "$HOME/.dircolors" ] ; then
     eval $(dircolors -b $HOME/.dircolors)
 fi
+

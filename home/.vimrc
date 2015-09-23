@@ -3,6 +3,8 @@ au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 
 set softtabstop=4 shiftwidth=4 tabstop=4 expandtab
 
+set backupcopy=yes
+
 execute pathogen#infect()
 if ! has('gui_running')
     set ttimeoutlen=10
