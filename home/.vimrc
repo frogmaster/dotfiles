@@ -1,6 +1,18 @@
 au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=handlebars
 au BufNewFile,BufReadPost *.coffee setl foldmethod=indent nofoldenable
 
+if &term =~ '^screen'
+  " Page keys http://sourceforge.net/p/tmux/tmux-code/ci/master/tree/FAQ
+  execute "set t_kP=\e[5;*~"
+  execute "set t_kN=\e[6;*~"
+
+  " Arrow keys http://unix.stackexchange.com/a/34723
+  execute "set <xUp>=\e[1;*A"
+  execute "set <xDown>=\e[1;*B"
+  execute "set <xRight>=\e[1;*C"
+  execute "set <xLeft>=\e[1;*D"
+endif
+
 set softtabstop=4 shiftwidth=4 tabstop=4 expandtab
 
 set backupcopy=yes
