@@ -40,3 +40,6 @@
 [submodule "home/.vim/bundle/vim-virtualenv"]
 	path = home/.vim/bundle/vim-virtualenv
 	url = https://github.com/jmcantrell/vim-virtualenv.git
+[submodule "home/.vim/bundle/vim-qml"]
+	path = home/.vim/bundle/vim-qml
+	url = https://github.com/peterhoeg/vim-qml

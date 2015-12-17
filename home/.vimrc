@@ -37,3 +37,8 @@ endfunction
 map <F5> :call RunShebang()<CR>
 map <F1> :NERDTreeToggle<CR>
 let g:airline_powerline_fonts = 1
+
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>

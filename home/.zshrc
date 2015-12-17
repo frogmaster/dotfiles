@@ -60,6 +60,7 @@ alias ys='ssh -t -t ybershell'
 alias ta='tmux attach'
 alias nmup='nmcli con up id'
 alias nmdown='nmcli con down id'
+alias haldus='sudo yubiswitch on; nmup haldus; sudo yubiswitch off'
 fixssh() {
     for key in SSH_AUTH_SOCK SSH_CONNECTION SSH_CLIENT; do
         if (tmux show-environment | grep "^${key}" > /dev/null); then
