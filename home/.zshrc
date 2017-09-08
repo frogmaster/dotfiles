@@ -58,6 +58,7 @@ export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswi
 export JAVA_FONTS=/usr/share/fonts/TTF
 alias ys='ssh -t -t ybershell'
 alias ta='tmux attach'
+alias penv='. ~/work/py3e/bin/activate'
 alias nmup='nmcli con up id'
 alias nmdown='nmcli con down id'
 alias haldus='sudo yubiswitch on; nmup haldus; sudo yubiswitch off'

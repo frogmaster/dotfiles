@@ -15,6 +15,10 @@ endif
 
 set softtabstop=4 shiftwidth=4 tabstop=4 expandtab
 
+autocmd Filetype html setlocal ts=2 sts=2 sw=2
+autocmd Filetype typescript setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+
 set backupcopy=yes
 
 execute pathogen#infect()
@@ -46,6 +50,7 @@ function! RunShebang()
         echo "No shebang in this file."
     endif
 endfunction
+
 map <F5> :call RunShebang()<CR>
 map <F1> :NERDTreeToggle<CR>
 let g:airline_powerline_fonts = 1
@@ -54,3 +59,18 @@ nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
+
+let g:typescript_compiler_binary = 'tsc'
+let g:typescript_compiler_options = ''
+let g:typescript_indent_disable = 1
+set autoindent
+
+autocmd FileType typescript JsPreTmpl html
+autocmd FileType typescript syn clear foldBraces
+
+
+autocmd QuickFixCmdPost [^l]* nested cwindow
+autocmd QuickFixCmdPost    l* nested lwindow
+
+nmap <silent><Leader>f <Esc>:Pytest file<CR>
+nmap <silent><Leader>p <Esc>:Pytest project<CR>

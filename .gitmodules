@@ -43,3 +43,18 @@
 [submodule "home/.vim/bundle/vim-qml"]
 	path = home/.vim/bundle/vim-qml
 	url = https://github.com/peterhoeg/vim-qml
+[submodule "home/.vim/bundle/coveragepy"]
+	path = home/.vim/bundle/coveragepy
+	url = https://github.com/alfredodeza/coveragepy.vim.git
+[submodule "home/.vim/bundle/vimproc.vim"]
+	path = home/.vim/bundle/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "home/.vim/bundle/tsuquyomi"]
+	path = home/.vim/bundle/tsuquyomi
+	url = https://github.com/Quramy/tsuquyomi.git
+[submodule "home/.vim/bundle/typescript-vim"]
+	path = home/.vim/bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "home/.vim/bundle/vim-autopep8"]
+	path = home/.vim/bundle/vim-autopep8
+	url = https://github.com/tell-k/vim-autopep8
